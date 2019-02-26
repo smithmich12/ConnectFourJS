@@ -1,25 +1,29 @@
-const boardwidth = 7;
-const boardheight = 6;
+var currentplayer = 1;
 
-var board = [];
-var count = 0;
-for(var i = 0; i < boardheight; i++) {
-  board[i] = [];
-  for(var j = 0; j < boardwidth; j++){
-    board[i][j] = count++;
+function changePlayer() {
+  if(currentplayer == 1) {
+    currentplayer = 2;
+    return "yellow";
+  } else {
+    currentplayer = 1;
+    return "red";
   }
 }
-
 
 function clickedColumn(el) {
+  var color = changePlayer();
   var cols = document.getElementsByClassName(el.className);
   for(var i = 0; i < cols.length; ++i) {
-    if(cols[i].firstChild.style.backgroundColor == "" && i == cols.length - 1)
-      cols[i].firstChild.style.backgroundColor = "red";
-    else if (cols[i].firstChild.style.backgroundColor != "" && i != 0)
-      cols[i - 1].firstChild.style.backgroundColor = "yellow";
+    if(cols[i].firstChild.style.backgroundColor == "" && i == cols.length - 1){
+      cols[i].firstChild.style.backgroundColor = color;
+    }
+    else if (cols[i].firstChild.style.backgroundColor != "" && i != 0) {
+      if(cols[i - 1].firstChild.style.backgroundColor != ""){
+        changePlayer();
+        break;
+      }
+      cols[i - 1].firstChild.style.backgroundColor = color;
+      break;
+    }
   }
 }
-
-
-console.table(board);
