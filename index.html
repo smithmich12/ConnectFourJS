@@ -3,8 +3,97 @@
   <head>
     <meta charset="utf-8">
     <title>Connect Four</title>
+    <script type="text/javascript" src="four.js"></script>
+    <style>
+      td span {
+        height: 50px;
+        width: 50px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      th span {
+        height: 50px;
+        width: 50px;
+        background-color: yellow;
+        border-radius: 50%;
+        display: inline-block;
+        visibility: hidden;
+      }
+      th:hover span {
+        visibility: visible;
+      }
+    </style>
+
   </head>
+
   <body>
-    <h3>Mike's Connect Four</h3>
+    <table>
+      <!-- <tr id="top-row"> DISABLED FOR NOW...
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+      </tr> -->
+      <caption><h1>Mike's Connect Four</h1></caption>
+      <tr>
+        <td class="0" onclick="clickedColumn(this)"><span></span></td>
+        <td class="1" onclick="clickedColumn(this)"><span></span></td>
+        <td class="2" onclick="clickedColumn(this)"><span></span></td>
+        <td class="3" onclick="clickedColumn(this)"><span></span></td>
+        <td class="4" onclick="clickedColumn(this)"><span></span></td>
+        <td class="5" onclick="clickedColumn(this)"><span></span></td>
+        <td class="6" onclick="clickedColumn(this)"><span></span></td>
+      </tr>
+      <tr id="">
+        <td class="0" onclick="clickedColumn(this)"><span></span></td>
+        <td class="1" onclick="clickedColumn(this)"><span></span></td>
+        <td class="2" onclick="clickedColumn(this)"><span></span></td>
+        <td class="3" onclick="clickedColumn(this)"><span></span></td>
+        <td class="4" onclick="clickedColumn(this)"><span></span></td>
+        <td class="5" onclick="clickedColumn(this)"><span></span></td>
+        <td class="6" onclick="clickedColumn(this)"><span></span></td>
+      </tr>
+      <tr id="">
+        <td class="0" onclick="clickedColumn(this)"><span></span></td>
+        <td class="1" onclick="clickedColumn(this)"><span></span></td>
+        <td class="2" onclick="clickedColumn(this)"><span></span></td>
+        <td class="3" onclick="clickedColumn(this)"><span></span></td>
+        <td class="4" onclick="clickedColumn(this)"><span></span></td>
+        <td class="5" onclick="clickedColumn(this)"><span></span></td>
+        <td class="6" onclick="clickedColumn(this)"><span></span></td>
+      </tr>
+      <tr id="">
+        <td class="0" onclick="clickedColumn(this)"><span></span></td>
+        <td class="1" onclick="clickedColumn(this)"><span></span></td>
+        <td class="2" onclick="clickedColumn(this)"><span></span></td>
+        <td class="3" onclick="clickedColumn(this)"><span></span></td>
+        <td class="4" onclick="clickedColumn(this)"><span></span></td>
+        <td class="5" onclick="clickedColumn(this)"><span></span></td>
+        <td class="6" onclick="clickedColumn(this)"><span></span></td>
+      </tr>
+      <tr id="">
+        <td class="0" onclick="clickedColumn(this)"><span></span></td>
+        <td class="1" onclick="clickedColumn(this)"><span></span></td>
+        <td class="2" onclick="clickedColumn(this)"><span></span></td>
+        <td class="3" onclick="clickedColumn(this)"><span></span></td>
+        <td class="4" onclick="clickedColumn(this)"><span></span></td>
+        <td class="5" onclick="clickedColumn(this)"><span></span></td>
+        <td class="6" onclick="clickedColumn(this)"><span></span></td>
+      </tr>
+      <tr id="">
+        <td class="0" onclick="clickedColumn(this)"><span></span></td>
+        <td class="1" onclick="clickedColumn(this)"><span></span></td>
+        <td class="2" onclick="clickedColumn(this)"><span></span></td>
+        <td class="3" onclick="clickedColumn(this)"><span></span></td>
+        <td class="4" onclick="clickedColumn(this)"><span></span></td>
+        <td class="5" onclick="clickedColumn(this)"><span></span></td>
+        <td class="6" onclick="clickedColumn(this)"><span></span></td>
+      </tr>
+    </table>
   </body>
 </html>
